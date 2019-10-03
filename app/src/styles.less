@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.wrapper {
+	& > .container {
+		padding-bottom: 7.5rem;
+		padding-top: 7.5rem;
+	}
+	.container {
+		max-width: 80rem;
+	}
+}
+
+input[type="text"],input[type="password"] {
+	&.ng-invalid {
+		border-color: #e67575;
+
+		&:focus {
+			border-color: #e20000;
+		}
+	}
+}

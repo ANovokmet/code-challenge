@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.less",
+              "node_modules/milligram/dist/milligram.css"
             ],
             "scripts": []
           },
@@ -124,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app"
+    }
+  },
+  "defaultProject": "app",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

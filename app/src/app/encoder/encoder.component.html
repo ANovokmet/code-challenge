@@ -1,1 +1,9 @@
-<p>encoder works!</p>
+<form #loginForm="ngForm">
+	<fieldset>
+		<label>Input</label>
+		<textarea [(ngModel)]="model.input" name="input"></textarea>
+		<input class="button-primary" type="submit" value="Send" (click)="submit()">
+		<label>Output</label>
+		<input [ngModel]="result$ | async" type="text" disabled name="result">
+	</fieldset>
+</form>

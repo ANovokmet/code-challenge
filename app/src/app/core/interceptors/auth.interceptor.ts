@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { mergeMap, catchError } from 'rxjs/operators';
+import { mergeMap, catchError, take } from 'rxjs/operators';
+
 import { AuthService } from '../services/auth.service';
 
 @Injectable()
@@ -11,6 +12,7 @@ export class AuthInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
         return this.authenticationService.token$.pipe(
+            take(1),
             mergeMap(token => {
 
                 if (token) {
