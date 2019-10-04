@@ -16,7 +16,6 @@ export class AuthGuard implements CanActivate {
 
         return this.authenticationService.authenticated$.pipe(map(isAuthenticated => {
             if (!isAuthenticated) {
-                console.log('redirect');
                 this.authenticationService.redirectToLogin();
             }
 

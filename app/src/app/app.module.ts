@@ -30,7 +30,7 @@ import { EncodeService, LoginService } from './core/api';
         AppRoutingModule,
         CoreModule,
         FormsModule,
-        StoreModule.forRoot({ [rootFeatureKey]: reducer }, {
+        StoreModule.forRoot({ root: reducer }, {
             runtimeChecks: {
                 strictStateImmutability: true,
                 strictActionImmutability: true,

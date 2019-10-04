@@ -18,10 +18,10 @@ export class AuthService {
     }
 
     public redirectToLogin() {
-        this.router.navigate(['login']);
+        this.router.navigate(['code-challenge', 'login']);
     }
 
     public successfulLogin() {
-        this.router.navigate(['encoder']);
+        this.router.navigate(['code-challenge', 'encoder']);
     }
 }

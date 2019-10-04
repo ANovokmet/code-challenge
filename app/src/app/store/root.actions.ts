@@ -17,7 +17,7 @@ export class LoginRequest implements Action {
 
 export class LoginSuccess implements Action {
     readonly type = RootActionTypes.LoginSuccess;
-    constructor(public payload: { data: LoginResponseModel }) { console.log(payload);  }
+    constructor(public payload: { data: LoginResponseModel }) { }
 }
 
 export class LoginFailure implements Action {
@@ -32,7 +32,7 @@ export class EncodeRequest implements Action {
 
 export class EncodeSuccess implements Action {
     readonly type = RootActionTypes.EncodeSuccess;
-    constructor(public payload: { data: EncodeResponseModel }) { console.log(payload); }
+    constructor(public payload: { data: EncodeResponseModel }) { }
 }
 
 export class EncodeFailure implements Action {

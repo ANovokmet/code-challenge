@@ -6,9 +6,14 @@ import { AuthGuard } from './core/guards/auth.guard';
 
 
 const routes: Routes = [
-    { path: '', redirectTo: 'encoder', pathMatch: 'full' },
-    { path: 'login', component: LoginComponent },
-    { path: 'encoder', component: EncoderComponent, canActivate: [AuthGuard] }
+    {
+        path: 'code-challenge',
+        children: [
+            { path: '', redirectTo: 'encoder', pathMatch: 'full' },
+            { path: 'login', component: LoginComponent },
+            { path: 'encoder', component: EncoderComponent, canActivate: [AuthGuard] }
+        ]
+    }
 ];
 
 @NgModule({
